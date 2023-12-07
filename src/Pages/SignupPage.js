@@ -16,8 +16,7 @@ function SignupPage() {
   useEffect(() => console.log(userInfo), [userInfo]);
   return (
     <>
-    <p style={{color:"black",fontSize:"1.5rem"}}>Enter Email: admin@admin.com and Password: admin for Login and Any name for Display</p>
-      {userInfo && <Navigate to="/" />}
+     {userInfo && <Navigate to="/" />}
       <div className="loginContainer">
         <div style={{ marginTop: "6rem", padding: "1rem",width:"20rem" }}>
           <div style={{width:"70%",marginLeft:"3rem"}} className="logo">🦄DataGram</div>

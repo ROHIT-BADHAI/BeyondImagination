@@ -20,13 +20,9 @@ export function AuthContextProvider({ children }) {
   }
 
   const signUp=async(data)=>{
-    if(data.email!=="admin@admin.com" || data.password!=="admin"){
-      Toast("Invalid Credentials","error")
-      return;
-    }else{
     Toast("Login Successful","success")
     setUserInfo(data);
-    }
+    
   }
 
 
