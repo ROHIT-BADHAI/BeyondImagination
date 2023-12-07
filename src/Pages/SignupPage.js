@@ -56,6 +56,7 @@ function SignupPage() {
               <label htmlFor="password">Password</label>
               <div className="inputs">
                 <input
+                type="password"
                   style={{ width: "100%", height: "1.5rem" }}
                   id="password"
                   {...register("password", {
