@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
+import { Toast } from "../Features/Toast/Toast";
 const authContext = createContext({
   userInfo:null,
   signUp:()=>{},
@@ -19,7 +20,13 @@ export function AuthContextProvider({ children }) {
   }
 
   const signUp=async(data)=>{
+    if(data.email!=="admin@admin.com" || data.password!=="admin"){
+      Toast("Invalid Credentials","error")
+      return;
+    }else{
+    Toast("Login Successful","success")
     setUserInfo(data);
+    }
   }
 
 

@@ -3,6 +3,7 @@ import "../Styles/index.css";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useAuthContext } from "../Context/authContext";
+import { Toast } from "../Features/Toast/Toast";
 function SignupPage() {
   const { signUp } = useAuthContext();
   const {
@@ -15,9 +16,10 @@ function SignupPage() {
   useEffect(() => console.log(userInfo), [userInfo]);
   return (
     <>
+    <p style={{color:"black",fontSize:"1.5rem"}}>Enter Email: admin@admin.com and Password: admin for Login and Any name for Display</p>
       {userInfo && <Navigate to="/" />}
       <div className="loginContainer">
-        <div style={{ marginTop: "10rem", padding: "1rem",width:"20rem" }}>
+        <div style={{ marginTop: "6rem", padding: "1rem",width:"20rem" }}>
           <div style={{width:"70%",marginLeft:"3rem"}} className="logo">🦄DataGram</div>
           <form noValidate onSubmit={handleSubmit((data) => signUp(data))}>
             <div className="form" >

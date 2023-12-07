@@ -5,7 +5,8 @@ import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import { UserContextProvider } from "./Context/UserContext";
 import { AuthContextProvider } from "./Context/authContext";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
             {/* <Route exact path="/login" element={<LoginPage />} /> */}
           </Routes>
         </Router>
+        <ToastContainer/>
       </UserContextProvider>
       </AuthContextProvider>
 
