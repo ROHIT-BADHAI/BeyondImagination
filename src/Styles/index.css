@@ -32,7 +32,7 @@
     height: 1.5rem; 
     align-items: center;
     height: 64px;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
 }
 
